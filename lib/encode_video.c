@@ -193,7 +193,7 @@ void open_video(VideoContext* ctx, Error* err)
 		av_hwdevice_ctx_create(
 			&ctx->hw_device_ctx, AV_HWDEVICE_TYPE_VAAPI, vaapi_device, NULL, 0) == 0)
 	{
-		codec = avcodec_find_encoder_by_name("h264_vaapi");
+		codec = avcodec_find_encoder_by_name("hevc_vaapi");
 		if (codec)
 		{
 			ctx->c = avcodec_alloc_context3(codec);
